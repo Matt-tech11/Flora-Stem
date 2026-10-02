@@ -3,7 +3,10 @@ import { Button, Layout } from 'antd';
 import {MenuUnfoldOutlined, MenuFoldOutlined} from '@ant-design/icons'
 import Sidebar from './components/Sidebar';
 import './App.css';
+import { Flex } from 'antd';
 import CustomHeader from './components/Header';
+import MainContent from './components/MainContent';
+import SideContent from './components/SideContent';
 
 const {Sider, Header, Content } = Layout;
 const App = () => {
@@ -17,8 +20,15 @@ const App = () => {
         className='triger-btn'/>
       </Sider>
       <Layout>
-        <Header className="header"><CustomHeader/></Header>
-        <Content className="content"></Content>
+        <Header className="header">
+          <CustomHeader/>
+        </Header>
+        <Content className="content">
+          <Flex gap="large">
+            <MainContent />
+            <SideContent />
+          </Flex>
+        </Content>
       </Layout>
     </Layout>
   );

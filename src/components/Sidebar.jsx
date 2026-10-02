@@ -13,8 +13,8 @@ const Sidebar = () => {
         </Flex>
         <Menu mode='inline' defaultSelectedKeys={['1']} className="menu-bar" 
         items={[
-            {key:'1', icon:<UserOutlined />, label: 'Dashboard'},
-            {key:'2', icon:<ProfileOutlined />, label: 'Profile'},
+            {key:'1', icon:<ProfileOutlined />, label: 'Dashboard'},
+            {key:'2', icon:<UserOutlined />, label: 'Profile'},
             {key:'3', icon:<OrderedListOutlined />, label: 'ToDo'},
             {key:'4', icon:<CarryOutOutlined />, label: 'My Orders'},
             {key:'5', icon:<LogoutOutlined />, label: 'LogOut'},
