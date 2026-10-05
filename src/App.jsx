@@ -12,7 +12,7 @@ const {Sider, Header, Content } = Layout;
 const App = () => {
   const [collapsed, setCollapsed] = useState(false);
   return (
-    <Layout>
+    <Layout className="dashboard-layout">
       <Sider theme="light" trigger={null} collapsible collapsed={collapsed} className="sider">
         <Sidebar/>
         <Button type='text' icon={collapsed ? <MenuUnfoldOutlined/> : <MenuFoldOutlined />}
@@ -24,7 +24,7 @@ const App = () => {
           <CustomHeader/>
         </Header>
         <Content className="content">
-          <Flex gap="large">
+          <Flex gap="large" className="dashboard-content">
             <MainContent />
             <SideContent />
           </Flex>

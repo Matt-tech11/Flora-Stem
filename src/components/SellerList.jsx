@@ -3,9 +3,9 @@ import React from 'react'
 
 const SellerList = () => {
   return (
-    <Flex align="center" justify="space-between" gap="large">
-        <Flex vertical='row' gap="small" className="top-seller">
-            <Flex align="center" justify="space-between">
+    <Flex gap="large" className="seller-list">
+        <Flex vertical gap="small" className="seller-section">
+            <Flex align="center" justify="space-between" className="seller-section-heading">
                 <Typography.Title level={5} strong className='primary--color'>
                     Top-Seller
                 </Typography.Title>
@@ -14,8 +14,9 @@ const SellerList = () => {
                 </Button>
             </Flex>
             <Card>
-                <Flex align="center" justify="space-evenly">
-                    <Avatar.Group 
+                <Flex align="center" justify="space-between" wrap="wrap" gap="small" className="seller-card-content">
+                    <Avatar.Group
+                    className="seller-avatars"
                     maxCount={5} 
                     maxPopoverTrigger='click' 
                     size="large" 
@@ -46,8 +47,9 @@ const SellerList = () => {
                             <Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'/>
                         </Tooltip>
                     </Avatar.Group>
+                    <Flex align="center" className="seller-stats">
                     <Divider type='vertical' className='divider' />
-                    <Flex vertical="row">
+                    <Flex vertical className="seller-stats-text">
                         <Typography.Text type='secondary' strong>
                             1,200 plant sold
                         </Typography.Text>
@@ -55,14 +57,15 @@ const SellerList = () => {
                             10 sellers
                         </Typography.Text>
                     </Flex>
+                    </Flex>
                 </Flex>
             </Card>
         </Flex>
 
 
 
-        <Flex vertical='row' gap="small" className="featured-seller" >
-            <Flex align="center" justify="space-between">
+        <Flex vertical gap="small" className="seller-section">
+            <Flex align="center" justify="space-between" className="seller-section-heading">
                 <Typography.Title level={5} strong className='primary--color'>
                     Featured Sellers
                 </Typography.Title>
@@ -71,8 +74,9 @@ const SellerList = () => {
                 </Button>
             </Flex>
              <Card>
-                <Flex align="center" justify="space-evenly">
-                    <Avatar.Group 
+                <Flex align="center" justify="space-between" wrap="wrap" gap="small" className="seller-card-content">
+                    <Avatar.Group
+                    className="seller-avatars"
                     maxCount={5} 
                     maxPopoverTrigger='click' 
                     size="large" 
@@ -103,14 +107,16 @@ const SellerList = () => {
                             <Avatar src='https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png'/>
                         </Tooltip>
                     </Avatar.Group>
+                    <Flex align="center" className="seller-stats">
                     <Divider type='vertical' className='divider' />
-                    <Flex vertical="row">
+                    <Flex vertical className="seller-stats-text">
                         <Typography.Text type='secondary' strong>
                             1,500 plant sold
                         </Typography.Text>
                         <Typography.Text type='secondary' strong>
                             13 sellers
                         </Typography.Text>
+                    </Flex>
                     </Flex>
                 </Flex>
             </Card>

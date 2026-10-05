@@ -1,4 +1,12 @@
 /* Main app */
+#root {
+    min-height: 100vh;
+}
+
+.dashboard-layout {
+    min-height: 100vh;
+}
+
 .header {
     padding-top: 12px;
     background: #fff;
@@ -6,6 +14,12 @@
 .content {
     margin: 24px 16px;
     padding: 20px;
+    min-width: 0;
+}
+
+.dashboard-content {
+    align-items: flex-start;
+    min-width: 0;
 }
 .triger-btn {
     font-size: 16px;
@@ -79,20 +93,144 @@
 
 /* plant list */
 .plant-card{
-    flex: 1;
+    min-width: 0;
     height: 250px;
     text-align: center;
 }
+
+.main-content {
+    flex: 1 1 0;
+    min-width: 0;
+}
+
+.main-content-stack,
+.products-list {
+    min-width: 0;
+    width: 100%;
+}
+
+.products-header,
+.seller-section-heading,
+.activity-heading {
+    min-width: 0;
+}
+
+.plant-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
+    gap: 24px;
+}
+
+.plant-card .ant-card-body {
+    padding: 16px;
+}
+
 /* seller list */
-.top-seller,
-.featured-seller {
-    flex: 1;
+.seller-list {
+    align-items: stretch;
+    min-width: 0;
+    width: 100%;
+}
+
+.seller-section {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+.seller-section-heading .ant-typography,
+.activity-heading .ant-typography {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.seller-section-heading .ant-btn,
+.activity-heading .ant-btn {
+    flex: 0 0 auto;
+    white-space: nowrap;
+}
+
+.seller-card-content {
+    min-width: 0;
+}
+
+.seller-avatars,
+.seller-stats {
+    flex: 0 0 auto;
+}
+
+.seller-stats-text {
+    white-space: nowrap;
 }
 
 .divider {
-    border: 2px solid green;
+    border: 0;
+    border-inline-start: 3px solid #4f6f52;
     height: 50px;
+    margin-inline: 8px;
 }
 .card {
+    position: relative;
+    width: 100%;
+    min-height: 260px;
+    overflow: hidden;
     background-image: linear-gradient(to bottom, #4c7f79, #87e8de);
+}
+
+.order-summary {
+    position: relative;
+    z-index: 1;
+    width: 54%;
+}
+
+.order-summary .ant-typography {
+    font-size: 18px;
+    line-height: 1.3;
+}
+
+.order-plant {
+    position: absolute;
+    z-index: 0;
+    right: -12px;
+    bottom: -28px;
+    width: 145px;
+    height: auto;
+    pointer-events: none;
+}
+
+.side-content {
+    flex: 0 0 300px;
+    min-width: 0;
+    width: 300px;
+}
+
+.activity-heading {
+    gap: 8px;
+}
+
+@media (max-width: 1100px) {
+    .dashboard-content {
+        flex-direction: column;
+    }
+
+    .main-content,
+    .side-content {
+        flex: 1 1 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .content {
+        margin: 12px 8px;
+        padding: 12px;
+    }
+
+    .seller-list {
+        flex-direction: column;
+    }
+
+    .seller-section {
+        flex-basis: auto;
+        width: 100%;
+    }
 }
