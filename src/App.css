@@ -93,7 +93,8 @@
 
 /* plant list */
 .plant-card{
-    min-width: 0;
+    /* min-width: 0; */
+    flex: 1;
     height: 250px;
     text-align: center;
 }
