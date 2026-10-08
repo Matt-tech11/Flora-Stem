@@ -1,6 +1,6 @@
 import { Button, Typography,Image, Card, Flex } from 'antd'
 import React from 'react'
-import plantData from '../plantData'
+import plantData from '../../plantData'
 
 const {Meta} = Card;
 const ProductsList = () => {

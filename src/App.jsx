@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Button, Layout } from 'antd';
 import {MenuUnfoldOutlined, MenuFoldOutlined} from '@ant-design/icons'
-import Sidebar from './components/Sidebar';
+import Sidebar from './components/Dashboard/Sidebar';
 import './App.css';
 import { Flex } from 'antd';
-import CustomHeader from './components/Header';
-import MainContent from './components/MainContent';
-import SideContent from './components/SideContent';
+import CustomHeader from './components/Dashboard/Header';
+import MainContent from './components/Dashboard/MainContent';
+import SideContent from './components/Dashboard/SideContent';
 
 const {Sider, Header, Content } = Layout;
 const App = () => {

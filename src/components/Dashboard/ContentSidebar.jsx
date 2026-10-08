@@ -1,6 +1,6 @@
 import { Card, Flex, Typography } from 'antd'
 import React from 'react'
-import plant from "../assets/plant01.png"
+import plant from "../../assets/plant01.png";
 
 const ContentSidebar = () => {
   return (
