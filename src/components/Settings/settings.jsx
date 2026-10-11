@@ -48,6 +48,8 @@ const Settings = () => {
         </Flex>
       </Card>
 
+     
+
       <Card className="page-card settings-card" title="Display">
         <Flex align="center" justify="space-between" gap="middle">
           <div>
@@ -58,7 +60,35 @@ const Settings = () => {
           <Select
             aria-label="Dashboard language"
             defaultValue="English"
-            options={[{ value: 'English', label: 'English' }]}
+            options={[
+              { value: 'English', label: 'English' },
+              { value: 'French', label: 'French' }
+            ]}
+            style={{ width: 140 }}
+          />
+        </Flex>
+      </Card>
+
+
+
+       <Typography.Title level={2}>Farm Accounts</Typography.Title>
+      <Typography.Paragraph type="secondary">
+        Add another Farm account to Flora to keep you up to date.
+      </Typography.Paragraph>
+       <Card className="page-card settings-card" title="Switch Accounts">
+        <Flex align="center" justify="space-between" gap="middle">
+          <div>
+            <Typography.Text strong>Accounts</Typography.Text>
+            <br />
+            <Typography.Text type="secondary">Choose the account to switch to dashboard.</Typography.Text>
+          </div>
+          <Select
+            aria-label="Dashboard language"
+            defaultValue="English"
+            options={[
+              { value: 'English', label: 'English' },
+              { value: 'French', label: 'French' }
+            ]}
             style={{ width: 140 }}
           />
         </Flex>

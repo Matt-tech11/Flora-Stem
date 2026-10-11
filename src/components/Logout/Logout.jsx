@@ -22,7 +22,7 @@ const Logout = ({ onCancel }) => {
 
   return (
     <section className="page-view">
-      <Typography.Title level={2}>Log out</Typography.Title>
+      <Typography.Title level={2}>Account</Typography.Title>
       <Typography.Paragraph type="secondary">
         Finish up and leave your Flora workspace.
       </Typography.Paragraph>
